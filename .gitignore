@@ -1,0 +1,5 @@
+# Ignore node_modules folder
+node_modules/
+
+# Additional rule to ignore node_modules anywhere in the project
+**/node_modules/
