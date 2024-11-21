@@ -1,4 +1,11 @@
-import expr from 'express'
-const app=expr()
+const mongoose = require('mongoose')
 
-app.listen(3000,()=>{consosle.log('Server Listening')})
+const taskSchema=new mongoose.Schema({
+    title:{type:String,required:true},
+    description:{type:String},
+    status:{type:boolean,default:false},
+    dueDate:{type:Date},
+    category:{type:String}
+})
+
+module.exports=mongoose.model("Task",taskSchema)

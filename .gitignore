@@ -3,3 +3,9 @@ node_modules/
 
 # Additional rule to ignore node_modules anywhere in the project
 **/node_modules/
+
+#ignore packagelock json
+package-lock.json
+
+#ignore package.json
+package.json
