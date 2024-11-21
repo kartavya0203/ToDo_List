@@ -9,3 +9,6 @@ package-lock.json
 
 #ignore package.json
 package.json
+
+#env variable
+.env
