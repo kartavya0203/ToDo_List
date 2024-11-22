@@ -34,7 +34,7 @@ exports.fetchAllTasks=async(req,res)=>{
 //update task information 
 
 exports.modifyTask=async (req,res)=>{
-    const{id}=req.paramas
+    const{id}=req.params
     const {title,description,dueDate,category}=req.body
 
     if(title && title.trim()==""){
@@ -63,7 +63,7 @@ exports.modifyTask=async (req,res)=>{
 //Mark Task as Comleted
 
 exports.completeTask=async(req,res)=>{
-    const{id}=req.paramas
+    const{id}=req.params
 
     try {
         const task=await Task.findById(id);
@@ -85,7 +85,7 @@ exports.completeTask=async(req,res)=>{
 //Delete task 
 
 exports.removeTask=async(req,res)=>{
-    const {id}=req.paramas
+    const {id}=req.params
 
     try {
         const deletedtask = await Task.findByIdAndDelete(id)
